@@ -1,0 +1,225 @@
+/* Globals */
+body {
+  background-color: #E0E0E0;
+}
+header {
+  z-index: 5;
+  background: #00675b;
+  position: fixed;
+  top: 0px;
+  -webkit-box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.6);
+  -moz-box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.6);
+  box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.6);
+}
+h4 {
+  opacity: 0.8;
+}
+p {
+  opacity: 0.6;
+}
+.fa {
+  font-size: 50px;
+  margin: 5px;
+}
+
+/* FAB */
+#FAB {
+  position: fixed;
+  bottom: 5vh;
+  right: 18vw;
+  z-index: 5;
+  border-radius: 100%;
+  background-color: #009688;
+  -webkit-box-shadow: 0px 5px 20px 0px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 5px 20px 0px rgba(0,0,0,1);
+  box-shadow: 0px 5px 20px 0px rgba(0,0,0,1);
+}
+
+#FAB > .fa {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+}
+#top {
+  top: 0px; 
+}
+
+/* Header */
+.social {
+  color: white;
+  opacity: 0.6;
+  text-align: right;
+}
+#name {
+  color: white;
+  opacity: 0.9;
+  text-align: center;
+}
+#BLUF {
+  color: white;
+  opacity: 0.8;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Portfolio */
+.start {
+  margin-top: 15vh;
+}
+.entry {
+  background: #FFF;
+  margin: 2vh 20vw;
+  padding: 1vh 0px 1vh 1vw;
+  -webkit-box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.6);
+  -moz-box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.6);
+  box-shadow: 2px 4px 10px 2px rgba(0,0,0,0.6);
+  min-height: 25vh;
+}
+.entry > div {
+  padding-top: 1vh;
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+.entry > div > img {
+  margin: auto auto 10px auto;
+  display: block;
+  max-height: 20vh;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.6);
+  box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.6);
+}
+
+/** MODAL GLOBAL **/
+.md-overlay {
+  display: none;
+  position: fixed;
+	z-index: 20;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.close {
+  color: white;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 50px;
+  font-weight: bold;
+}
+.close:hover, .close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/** Modal 1 (About Me/About Me Pic) */
+#aboutMePic {
+  border-radius: 20px;
+  position: fixed;
+  left: 1vw;
+  z-index: 10;
+  display: block;
+  top: 1vh;
+  margin: auto;
+  -webkit-box-shadow: 0px 4px 11px -3px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 4px 11px -3px rgba(0,0,0,1);
+  box-shadow: 0px 4px 11px -3px rgba(0,0,0,1);
+}
+.md1c {
+  display: none;
+}
+.modal-1 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  position: fixed;
+}
+#md-1-img {
+  margin-left: 50%;
+  margin-bottom: 25px;
+  transform: translate(-50%);
+  max-height: 800px;
+  max-width: 800px;
+  -webkit-box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.6);
+  -moz-box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.6);
+  box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.6);
+}
+.aboutMeText {
+  opacity: 0.9;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 100%;
+}
+
+/* MODAL 2 (Social Btns) */
+.md2c {
+  display: none;
+}
+.modal-2 {
+  display: block;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1010;
+  position: fixed;
+}
+
+/* Animations */
+.lflyX1 {
+  animation: lfly1 .4s ease-in;
+}
+.tflyY1 {
+  animation: tfly1 .4s ease-out;
+}
+.scaleIn {
+  animation: scaleIn .4s ease-in;
+  padding: 15px;
+  border-radius: 5px;
+  background: #FAFAFA;
+}
+
+
+
+/* KEYFRAMES */
+@keyframes scaleIn {
+  from {transform: scale(0.3)};
+  to {transform: scale(1)};
+}
+@keyframes lfly1 {
+  from {transform: translateX(-30%)};
+  to {transform: translateX(0px)};
+}
+@keyframes tfly1 {
+  from {transform: translateY(-30%)};
+  to {transform: translateY(0px)};
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 200px) {
+    #aboutMePic {
+        top: 10vh;
+        max-width: 20%;
+    }
+}
+@media screen and (min-width: 500px) {
+    #aboutMePic {
+        top: 5vh;
+        max-width: 20%;
+    }
+}
+@media screen and (min-width: 1000px) {
+    #aboutMePic {
+        top: 1vh;
+        max-width: 20%;
+    }
+}
